@@ -1,5 +1,5 @@
 module.exports = {
-    admins: ["315850603396071424"], //put the "admins" of the bot here, this will give them access to commands marked with `adminOnly: true`
+    admins: ["781992168188936224"], //put the "admins" of the bot here, this will give them access to commands marked with `adminOnly: true`
     token: "NzgyMDA4MDA0MjI4MTUzMzY0.X8F7tQ.4njyBPUD2mty1pD0DMVXJSV9WE8", //bot's login token from the discord developer page
     prefix: "." //prefix that the command calls should start with
 }
