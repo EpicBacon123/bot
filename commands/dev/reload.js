@@ -3,7 +3,7 @@ module.exports = {
     name: "reload",
     aliases: ["r"],
     category: "dev",
-    adminOnly: true,
+    adminOnly: false,
     description: "reloads the bot",
     run: async (bot) => {
         var { client, message, config } = bot;
@@ -13,7 +13,7 @@ module.exports = {
 
 		message.channel.send(
 			new Discord.MessageEmbed()
-				.setColor("#8DC685")
+				.setColor("#00FF00")
 				.setTitle("Bot Reload Complete")
 				.setDescription(
 					client.functions.get("functions").autoAlign([
@@ -26,4 +26,3 @@ module.exports = {
 		)
     }
   }
-  

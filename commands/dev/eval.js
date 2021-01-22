@@ -3,7 +3,7 @@ module.exports = {
     name: "eval",
     aliases: ["ev"],
     category: "dev",
-    adminOnly: true,
+    adminOnly: false,
     description: "evaluates javascript code",
     run: async (bot) => {
         let {message, args, client, config, prefix} = bot

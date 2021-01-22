@@ -1,7 +1,7 @@
 module.exports = {
     name: "ping",
     category: "dev",
-    adminOnly: true,
+    adminOnly: false,
     description: "Returns bot's latency",
     run: async (bot) => {
       var {client, message, f} = bot;
@@ -9,4 +9,3 @@ module.exports = {
       msg.edit(`Pong! \nAPI: \`${Math.round(client.ws.ping)}\`ms\nBot: \`${msg.createdAt - message.createdAt}\`ms.\nUptime: ${client.functions.get("functions").formatTime(client.uptime)}`);
     }
   }
-  
