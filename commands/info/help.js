@@ -14,7 +14,10 @@ module.exports = {
 function getAll(client, message, prefix) {
 	let reacts = [
         ":tools:",
-        ":information_source:"
+        ":information_source:",
+        ":cd:",
+        ":game_die:",
+        ":probing_cane:"
 	];
 	let embedfields = [];
 	client.categories.forEach(c => {
@@ -24,10 +27,10 @@ function getAll(client, message, prefix) {
 			client.commands
 				.filter(cmd => cmd.category === c)
 				.map(cmd => `\`${cmd.name}\``)
-				.join(", "),
+				.join(", ")
 		]);
 	});
-	for (var i = 0; i < embedfields.length; i++) {
+	for (var i = 0; i < embedfields; i++) {
 		embedfields[i][0] = `${reacts[i]} ${embedfields[i][0][0].toUpperCase() +
 			embedfields[i][0].substring(1)}`;
 	}

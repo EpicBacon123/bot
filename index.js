@@ -49,23 +49,25 @@ client.loadEvents(client, false);
 module.exports = bot;
 client.login(token);
 
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  message.channel.send(`Write and run, ${member}, this is a testing server.`);
-});
+let i = 0;
+// client.on('serverMemberAdd', member => {
+//   // Send the message to a designated channel on a server:
+//   const channel = member.server.channels.cache.find(ch => ch.name === 'welcome');
+//   // Do nothing if the channel wasn't found on this server
+//   if (!channel) return;
+//   // Send the message, mentioning the member
+//     message.channel.send(`Write and run, ${member}, this is a testing server.`);
+// });
 
 client.on("message", (message)=>{
-    if (message["content"] === "hello"){
-        message.reply("hello world");
-    }
-    if ((message.content === "bye" || message.content === "goodbye") && !message.author.bot) {
-        message.reply("goodbye");
-    }
-    if (message.content === "1" && !message.author.bot) {
-        message.channel.send("Data Type: String\nValue: 1");
+    if (message.content == ".createmsg" && message.author.id == "781992168188936224") {
+            let i = 1;
+            let timer = setInterval(function() {
+                message.channel.send(i);
+                i++;
+                if (i >= 102) {
+                    clearInterval(timer);
+                }
+            }, 100)
     }
 });
