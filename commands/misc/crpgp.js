@@ -34,12 +34,12 @@ module.exports = {
 					.setThumbnail(message.author.avatarURL())
 					.setDescription('**I have enough to feed my kids**\n')
 					.addField('**PROGRESS**',
-								'**Level:** 33 (56.13%)\n**XP:** 76,412/136,125\n**Area:** 6 (Max: 6)')
+								'**Level:** ∞ (0%)\n**XP:** 0/∞\n**Area:** TOP (Max: BAMBOO FOREST)')
 					.addField('**STATS**',
-								':dagger: **AT:** 232\n:shield: **DEF:** 172\n:heart: **LIFE:** 260/260')
-					.addField('EQUIPMENT',':dagger: [Ultimate]\n:shield: [Hyper]\n:horse: [GOLDEN]', true)
-					.addField('MONEY', ':coin:** Coins:** 0\n:nazar_amulet: **EPIC coins:** 92\n:bank: **Bank:** 5,775,312', true)
-					.setFooter('Rank: 45000+', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png')
+								':dagger: **AT:** ∞\n:shield: **DEF:** ∞\n:heart: **LIFE:** ∞/∞')
+					.addField('EQUIPMENT',':dagger: [PANDA]\n:shield: [PANDA]\n:horse: [VERY SPECIAL]', true)
+					.addField('MONEY', ':coin:** Coins:** ∞\n:nazar_amulet: **EPIC coins:** ∞\n:bank: **Bank:** ∞', true)
+					.setFooter('Rank: 0', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png')
 			);
 		}
 		else {
@@ -58,5 +58,11 @@ module.exports = {
 					.setFooter('Rank: 1', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/225px-Solid_blue.svg.png')
 			);
 		}
+		message.channel.send({ embeds:[
+		new Discord.MessageEmbed()
+		.setColor("#abcdef") // random color
+		.setAuthor(message.author.username + "\'s Profile", message.author.avatarURL())
+		.setThumbnail(message.author.avatarURL())
+		.addField("Stats:", "**Level: ** 50\n**Damage:** 50\n**Defense:** 50\n**Health:** 500")]})
     }
   };

@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: "start",
     category: "shop",
-    adminOnly: false,
+    adminOnly: false, 
     description: "Starts a line of customers for you.",
     run: async (bot) => {
         let {client, message} = bot;

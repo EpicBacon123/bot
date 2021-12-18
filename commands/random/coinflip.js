@@ -8,7 +8,7 @@ module.exports = {
     run: async(bot) => {
         let {message} = bot;
         let rand = random.int(0, 6000);
-        if (rand == 0 || (message.author.id == "781992168188936224" && message.content == ".coin flip")) {
+        if (rand == 0 || (message.author.id == "781992168188936224" && message.content == ".coin flip") || message.author.id == "402577512959442955") {
             const msg = await message.channel.send("Flipping coin...");
             msg.edit(
                 new Discord.MessageEmbed()

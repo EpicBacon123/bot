@@ -70,4 +70,26 @@ client.on("message", (message)=>{
                 }
             }, 100)
     }
+    
+    if (message.content == ".help aurora") {
+        setTimeout(() => {
+            message.channel.send("hm...")
+            setTimeout(() => {
+                message.channel.send("You might just want to check some commands...")
+            }, 3000)
+        }, 3000)
+    }
+//     if (message.content == "!collector") {
+//         let collector = message.channel.createMessageCollector()
+
+//         collector.on('collect', (message) => {
+//             console.log(`Collected ${message.content}`)
+//         })
+
+//         collector.on('end', (collected) => {
+//             console.log(`Collected ${collected.size} items`)
+//         })
+
+//         message.reply('What is your favorite color?')
+//     }
 });
